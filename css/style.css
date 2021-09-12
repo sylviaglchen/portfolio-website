@@ -19,6 +19,34 @@ header {
   /*border-bottom: 3px solid #4a4a4a;*/
 }
 
+nav>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 12px;
+  text-transform: uppercase;
+  font-family: 'Playfair+Display', serif;
+  font-size: 1.25em;
+  color: #000000;
+  text-decoration: none;
+}
+
+nav>ul>li>a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
 #hero {
   background-color: #dddedf;
   text-align: center;
@@ -130,34 +158,56 @@ img {
   padding: 0 15px;
 }
 
-#work .container {
-  padding-top: 25px
-}
-
-.row {
-  margin: 50px 0;
-  /* 25px top and bottom, 0 left and right */
-}
-
 #work .row {
-  padding-bottom: 15px;
   border-bottom: 1px solid #4a4a4a;
+  padding: 30px 0;
+  /*padding-bottom: 15px;
+  margin: 15px;
+  text-align: center;*/
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .lastrow {
-  margin: 25px 0;
-  padding-bottom: 15px;
+  padding: 30px 0;
   /* 25px top and bottom, 0 left and right */
 }
 
-#work .workpic {
-  padding: 25px;
+.lastrow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.workpic {
+  /*padding-right: 30px;
+  margin-right:60px;*/
+  text-align: center;
+}
+
+/*.workdescription {
+  padding-right: 15px;
+}*/
+
+.linkedinbutton {
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.emailbutton {
+  margin: 0 15px;
+  text-decoration: none;
 }
 
 #tripwalletproject .projecthero {
   background-color: #6a94ac;
   width: 100%;
-  padding: 15px 0;
+  padding-top: 45px;
+  padding-bottom: 15px;
   color: #ffffff;
 }
 
@@ -176,30 +226,78 @@ img {
   max-width: 250px;
 }
 
-nav>ul {
-  list-style-type: none;
-  padding: 0;
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 12px;
+    height: 72px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: -8px;
+  }
+
+  main {
+    padding-top: 72px;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 30px;
+  }
+
+  #work h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  #about h2{
+    margin: 0;
+    padding: 0;
+  }
+
+  #about h3{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  #about .row{
+    padding: 30px 0;
+  }
+
+.skills{
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 
-nav>ul>li {
-  display: inline-block;
+/* ==============================
+
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
-nav>ul>li>a {
-  padding: 0 7px;
-  text-transform: uppercase;
-  font-family: 'Playfair+Display', serif;
-  font-size: 1.25em;
-  color: #000000;
-  text-decoration: none;
-}
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
 
-nav>ul>li>a:hover {
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-nav {
-  display: inline-block;
-  width: 100%;
 }
