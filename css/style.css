@@ -15,6 +15,8 @@ header {
   position: fixed;
   box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.45);
   width: 100%;
+  top: 0rem;
+  z-index: 100;
   /*margin: 10px;*/
   /*border-bottom: 3px solid #4a4a4a;*/
 }
@@ -248,6 +250,29 @@ img {
 
 .logo {
   max-width: 250px;
+}
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 /* ==============================
