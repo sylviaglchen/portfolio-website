@@ -135,14 +135,45 @@ img {
   font-weight: 400;
   padding: 12px 32px;
   border-radius: 32px;
-  /*border-bottom: 2px solid #994c30; /* width of the border, type, color */
-  transition: 0.2s opacity;
+  /* border-bottom: 2px solid #994c30; /* width of the border, type, color */
   text-decoration: none;
   border: 2px solid black;
+  transition: 0.3s opacity;
 }
 
 .readmorebutton:hover {
   opacity: 0.2;
+}
+
+.comingsoon{
+  display: inline-block;
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #ffffff;
+  color: #000000;
+  /* needed to override the default link color */
+  font-weight: 400;
+  padding: 12px 32px;
+  border-radius: 32px;
+  font-style: italic;
+  /*border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  text-decoration: none;
+  border: 2px solid black;
+}
+
+.disabled{
+  pointer-events: none;
+}
+
+.linkedinbutton {
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s opacity;
+}
+
+.emailbutton {
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s opacity;
 }
 
 .linkedinbutton:hover {
@@ -156,6 +187,9 @@ img {
 /* Layout styling */
 .container {
   padding: 0 15px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #work .row {
@@ -192,16 +226,6 @@ img {
 /*.workdescription {
   padding-right: 15px;
 }*/
-
-.linkedinbutton {
-  margin: 0 15px;
-  text-decoration: none;
-}
-
-.emailbutton {
-  margin: 0 15px;
-  text-decoration: none;
-}
 
 #tripwalletproject .projecthero {
   background-color: #6a94ac;
@@ -287,12 +311,12 @@ Medium devices (640px and larger)
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  .col-lg-7 {
+    width: 60%;
   }
-
+  .col-lg-5 {
+    width: 40%;
+  }
 }
 
 /* ==============================
