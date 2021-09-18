@@ -175,6 +175,12 @@ img {
   transition: 0.3s opacity;
 }
 
+#tripwalletproject .readmorebutton {
+  display: inline-block;
+  margin: 15px;
+  width: 255px;
+}
+
 .readmorebutton:hover {
   opacity: 0.2;
 }
@@ -254,6 +260,14 @@ img {
   text-align: center;
 }
 
+#about h1 {
+  padding-top: 30px;
+}
+
+#about h2 {
+  padding-top: 10px;
+}
+
 /*.workdescription {
   padding-right: 15px;
 }*/
@@ -265,13 +279,14 @@ img {
   color: #ffffff;
 }
 
-#tripwalletproject .maincontent{
+#tripwalletproject .maincontent {
   /*background-color: #eff4f7;*/
 }
 
-#tripwalletproject .container{
+#tripwalletproject .container {
   padding: 30px 15px;
 }
+
 .center {
   text-align: center;
 }
