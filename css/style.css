@@ -10,24 +10,60 @@ Tertiary Color (Grey): #CBC7CA
 
 header {
   background-color: #dddedf;
+  position: fixed;
+  box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.42);
+  width: 100%;
+  padding: 15px 0 8px;/*top padding 15px, left&right=0, bottom=0*/
+  /*
   text-align: center;
   padding-top: 15px;
-  position: fixed;
-  box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.45);
-  width: 100%;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.42);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.42);
   top: 0rem;
   z-index: 100;
-  /*margin: 10px;*/
+  padding: 12px 0;
+  margin: 10px;*/
   /*border-bottom: 3px solid #4a4a4a;*/
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle.responsive nav {
+  padding-top: 24px;
+  background-color: #dddedf;
+  width: 100%;
+  /*box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.45);*/
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(134, 134, 134, 0.5);
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 28px;
+  padding-right: 0;
+  padding-top:4px
+}
+
+/*nav {
+  display: inline-block;
+  width: 100%;
+}*/
 nav>ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav>ul>li>a {
@@ -44,11 +80,6 @@ nav>ul>li>a:hover {
   font-weight: 700;
 }
 
-nav {
-  display: inline-block;
-  width: 100%;
-}
-
 #hero {
   background-color: #dddedf;
   text-align: center;
@@ -58,7 +89,8 @@ nav {
 }
 
 main {
-  padding-top: 134px;
+  /*padding-top: 134px;*/
+  padding-top: 56px;
 }
 
 body {
@@ -147,7 +179,7 @@ img {
   opacity: 0.2;
 }
 
-.comingsoon{
+.comingsoon {
   display: inline-block;
   /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #ffffff;
@@ -162,7 +194,7 @@ img {
   border: 2px solid black;
 }
 
-.disabled{
+.disabled {
   pointer-events: none;
 }
 
@@ -189,9 +221,6 @@ img {
 /* Layout styling */
 .container {
   padding: 0 15px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #work .row {
@@ -228,7 +257,6 @@ img {
 /*.workdescription {
   padding-right: 15px;
 }*/
-
 #tripwalletproject .projecthero {
   background-color: #6a94ac;
   width: 100%;
@@ -249,18 +277,31 @@ img {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 150px;
 }
 
 @keyframes color-change {
-  0% {fill: #edc655;}
-  50% {fill: #fcffad;}
-  100% {fill: #f76414;}
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
 }
 
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
 
 .sun {
@@ -279,16 +320,36 @@ img {
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
-  header {
-    text-align: unset;
-    padding: 12px;
-    height: 72px;
+  logo {
+    max-width: 250px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   nav {
     width: auto;
     float: right;
     margin-top: -8px;
+  }
+
+  nav>ul {
+    margin: 1em 0;
+  }
+
+  nav>ul>li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
   }
 
   main {
@@ -309,26 +370,26 @@ Medium devices (640px and larger)
     padding: 0;
   }
 
-  #about h2{
+  #about h2 {
     margin: 0;
     padding: 0;
   }
 
-  #about h3{
+  #about h3 {
     margin: 0;
     padding: 0;
     text-align: center;
   }
 
-  #about .row{
+  #about .row {
     padding: 30px 0;
   }
 
-.skills{
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .skills {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ==============================
@@ -339,6 +400,7 @@ Large devices (1024px or larger)
   .col-lg-7 {
     width: 60%;
   }
+
   .col-lg-5 {
     width: 40%;
   }
@@ -347,6 +409,4 @@ Large devices (1024px or larger)
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {
-
-}
+@media only screen and (min-width: 1440px) {}

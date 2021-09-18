@@ -15,20 +15,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/abe1c13414.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
     <div class="container">
-      <a href="index.html">
-        <img src="img/favicon.ico" alt="LOGO" class="logo">
+      <div class="navtoggle" id="myNavtoggle">
+        <a href="index.html">
+          <img class="logo" src="img/Logo.svg" alt="Sylvia Chen Product Designer logo" ></a>
         <nav>
           <ul class="navigation">
-            <li><a href="#work">Work</a></li>
+            <li><a href="#work" onclick="menuToggle()">Work</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
           </ul>
         </nav>
+      </div>
     </div>
   </header>
   <main>
@@ -134,6 +138,7 @@
       <h5>Copyright © 2021 Sylvia Guanling Chen</h5>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
 </body>
 
